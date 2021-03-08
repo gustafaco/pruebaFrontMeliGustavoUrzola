@@ -1,0 +1,272 @@
+$primary-color: #ffe700;
+$primary-background-color: #eeeeee;
+$interaction-primary-color: #398eff;
+$interaction-text-primary-color: #ffffff;
+$max-width-mobile: 600px;
+html, body {
+    background-color: $primary-background-color;
+    font-family: Helvetica, sans-serif;
+    font-size: 14px;
+    margin: 0;
+}
+input {
+    border: 0;
+    padding: 10px 5px 10px 15px ;
+    &:focus {
+        outline: none;
+    }
+}
+button {
+    background-color: $primary-background-color;
+    cursor: pointer;
+    border: 0;
+    padding: 0 10px;
+    &:focus {
+        outline: none;
+    }
+    &:hover {
+        background-color: darken($primary-background-color, 5);
+    }
+}
+h1 {
+    font-size: 1.2rem;
+}
+
+.base__container {
+    margin: 0 auto;
+    max-width: 1000px;
+}
+.base__input-group {
+    width: 100%;
+    display: flex;
+}
+.base__input-group button {
+    border: 0;
+    padding: 0 10px;
+}
+.base__all-width {
+    width: 100%;
+}
+.base__main-box {
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+.base__primary-button {
+    color: $interaction-text-primary-color;
+    background-color: $interaction-primary-color;
+    border: none;
+    border-radius: 4px;
+    padding: 10px;
+    width: 100%;
+    &:focus {
+        outline: none;
+    }
+    &:hover {
+        background-color: darken($interaction-primary-color, 10);
+    }
+}
+.base_text-secondary {
+    color: darken($primary-background-color, 30%);
+}
+.breadcrumb {
+    color: darken($primary-background-color, 30%);
+}
+.finder__header {
+    background-color: $primary-color;
+}
+.finder__search-box{
+    align-items: center;
+    display: flex;
+    padding: 10px;
+}
+.finder__search-message {
+    color: darken($primary-background-color, 30%);
+    margin: 15px 0 0 82px;
+}
+#nprogress {
+    pointer-events: none;
+  }
+  
+  #nprogress .bar {
+    background: $interaction-primary-color;
+  
+    position: fixed;
+    z-index: 1031;
+    top: 0;
+    left: 0;
+  
+    width: 100%;
+    height: 2px;
+  }
+  
+  /* Fancy blur effect */
+  #nprogress .peg {
+    display: block;
+    position: absolute;
+    right: 0px;
+    width: 100px;
+    height: 100%;
+    box-shadow: 0 0 10px $interaction-primary-color, 0 0 5px $interaction-primary-color;
+    opacity: 1;
+  
+    -webkit-transform: rotate(3deg) translate(0px, -4px);
+    -ms-transform: rotate(3deg) translate(0px, -4px);
+    transform: rotate(3deg) translate(0px, -4px);
+  }
+  
+  /* Remove these to get rid of the spinner */
+  #nprogress .spinner {
+    display: block;
+    position: fixed;
+    z-index: 1031;
+    top: 15px;
+    right: 15px;
+  }
+  
+  #nprogress .spinner-icon {
+    width: 18px;
+    height: 18px;
+    box-sizing: border-box;
+  
+    border: solid 2px transparent;
+    border-top-color: $interaction-primary-color;
+    border-left-color: $interaction-primary-color;
+    border-radius: 50%;
+  
+    -webkit-animation: nprogress-spinner 400ms linear infinite;
+    animation: nprogress-spinner 400ms linear infinite;
+  }
+  
+  .nprogress-custom-parent {
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .nprogress-custom-parent #nprogress .spinner,
+  .nprogress-custom-parent #nprogress .bar {
+    position: absolute;
+  }
+  
+  @-webkit-keyframes nprogress-spinner {
+    0% {
+      -webkit-transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(360deg);
+    }
+  }
+  @keyframes nprogress-spinner {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+@media only screen and (max-width: $max-width-mobile) {
+
+    html, body {
+        background-color: #fff;
+    }
+    .breadcrumb {
+        padding: 10px 15px !important;
+        display: none !important;
+    }
+    
+}
+
+
+
+.product__preview-box {
+    border-bottom: 1px solid #eeeeee;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 0;
+    width: 100%;
+    &:last-child {
+        margin-bottom: 0;
+        padding-bottom: 0;
+        border-bottom: none;
+    }
+    &:first-child {
+        padding-top: 0
+    }
+    &:hover {
+        border-right: 3px $primary-color solid;
+    }
+}
+.product__picture_box {
+    background-size: cover;
+    border-radius: 5px;
+    float: left;
+    height: 150px;
+    margin-right: 15px;
+    width: 150px;
+}
+.product__picture {
+    text-align: center;
+    flex: 3;
+}
+.product__info {
+    width: 100%;
+}
+.product__info-detail{
+    padding-top: 15px;
+    flex: 1;
+}
+.product__price {
+    padding-right: 5px;
+}
+.product__price-box {
+    margin: 15px 0 10px 0;
+    font-size: 1.6rem;
+    display: flex;
+    align-items: center;
+}
+.product__price-detail {
+    font-size: 2.4rem;
+}
+.product__price-detail-box {
+    display: flex;
+    padding: 5px 0 30px 0;
+}   
+.product__price-detail-decimals {
+    margin: 3px 0 0 5px;
+    font-size: 1.5rem;
+}
+.product__tittle {
+    font-size: 1.2rem;
+}
+.product__ciudad {
+    color: darken($primary-background-color, 30%);
+    font-size: 1rem;
+    min-width: 150px;
+    margin-top: 15px;
+}
+.product_detail_box {
+    display: flex;
+}
+.product__description {
+    color: darken($primary-background-color, 30%);
+    flex: 3;
+}
+
+@media only screen and (max-width: $max-width-mobile) {
+    .product__ciudad {
+        display: none;
+    }
+    .product_detail_box {
+        display: block;
+        flex-direction: column;
+    }
+    .product__picture {
+        height: 200px;
+    }
+}
+
+.classTest{
+    color: #398eff;
+}
